@@ -17,26 +17,29 @@ public class HelloWorld {
 		System.out.println("Please enter your age: ");
     	int age = scanner.nextInt();
 		System.out.println("Please enter your favorite 3+ digit number: ");
-    	int num = 0;
-		while(num/100<1){
+    	int num = scanner.nextInt();;
+		while(num/100<1||num/1000>=1){
+			System.out.println("Please enter your favorite 3+ digit number this time: ");
 			num = scanner.nextInt();
 		}
 		System.out.println("Please enter your GPA(cumulative): ");
     	int gpaC = scanner.nextInt();
 		while(gpaC>4||gpaC<0){
+			System.out.println("Please enter your cumulative GPA this time: ");
 			gpaC = scanner.nextInt();
 		}
 		System.out.println("Please enter your GPA(weighted): ");
-    	double gpaW = -1;
+    	double gpaW = scanner.nextDouble();
 		while(gpaW>5||gpaW<0){
+			System.out.println("Please enter your weighted GPA this time: ");
 			gpaW = scanner.nextDouble();
 		}
 		scanner.close();
-		System.out.println( "\nWelcome " + name + " to this program");
+		System.out.println( "\nWelcome to this program " + name);
 		if(age>17)
 			System.out.println("\nCongratulations, you are 18 and able to vote");
 		else	
-			System.out.println("\nYou have " + (18-age) + " years until you’re 18 and able to vote");
+			System.out.println("\nYou have " + (18-age) + " year(s) until you’re 18 and able to vote");
 
 		if(gpaW>4.49)
 			System.out.println("\nCongratulations, you have a high A\n");
@@ -47,7 +50,7 @@ public class HelloWorld {
 		else if(gpaW>2.99)
 			System.out.println("\nCongratulations, you have a B \n");
 		else 
-			System.out.println("\nYou’re trying your hardest\n");
+			System.out.println("\nYou’re trying your hardest, but you can get your GPA up\n");
 	int e = name.length();
 	while(e<=num){
 		System.out.print( e + ",");

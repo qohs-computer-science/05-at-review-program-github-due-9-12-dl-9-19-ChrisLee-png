@@ -53,7 +53,7 @@ public class HelloWorld {
 			System.out.println("\nYou’re trying your hardest, but you can get your GPA up\n");
 	int e = name.length();
 	while(e<=num){
-		System.out.print( e + ",");
+		System.out.print( e + ", ");
 		e+= name.length();
 	}
 	}
